@@ -1,0 +1,2502 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;family=Zen+Maru+Gothic:wght@400;500;700&amp;display=swap);
+
+html {
+  font-size: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  line-height: 1.5
+}
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: .6944444444vw
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  html {
+    font-size: .8695652174vw
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 2.6595744681vw
+  }
+}
+
+body {
+  color: #413b33;
+  background-color: #fcf8f1;
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none
+}
+
+ul,
+ol,
+dl {
+  list-style: none
+}
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.ly_rootLayout {
+  display: block;
+  min-height: 100vh
+}
+
+.ly_rootLayout_header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%
+}
+
+.ly_rootLayout_mainContents {
+  display: block
+}
+
+.ly_rootLayout_footer {
+  display: block;
+  padding: 2.2rem 0 1.1rem
+}
+
+@media screen and (max-width: 800px) {
+  .ly_rootLayout_footer {
+    padding: 1.2rem 2.4rem
+  }
+}
+
+.ly_globalHeader {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: #fff
+}
+
+.ly_globalHeader_logo {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 40rem;
+  padding: 6.6rem 4.4rem 6.6rem 6.6rem;
+  border-radius: 0 0 15rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff
+}
+
+.ly_globalHeader_logo+.ly_globalHeader_logo {
+  display: none
+}
+
+.ly_globalHeaderNavi {
+  display: block;
+  padding-top: 2.2rem
+}
+
+.ly_globalHeaderNavi_menu {
+  display: grid;
+  grid-template: 11rem 7rem/auto;
+  -webkit-box-align: center;
+  align-items: center
+}
+
+.ly_globalHeaderNavi_extArea {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  padding: 2rem 6.6rem;
+  margin-bottom: 2rem
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .ly_globalHeader_logo {
+  width: 27.1rem;
+  padding: 2.2rem 4.4rem;
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .ly_globalHeaderNavi {
+  display: block;
+  padding: 2.2rem 4.4rem
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .ly_globalHeaderNavi_menu {
+  grid-template: auto/77rem 22.3rem;
+  grid-column-gap: 1.1rem
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .ly_globalHeaderNavi_extArea {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  padding: 0;
+  margin-bottom: 0
+}
+
+@media screen and (max-width: 1150px) {
+  .ly_globalHeader_logo {
+    width: 30rem;
+    padding: 6.6rem 4.4rem
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .ly_globalHeaderNavi_menu {
+    grid-template: auto/54.5rem 22.3rem;
+    grid-column-gap: 2.2rem
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ly_globalHeader {
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    height: 7.5rem;
+    background-color: #fff;
+    pointer-events: none
+  }
+
+  .ly_globalHeader_logo {
+    width: 13.8rem;
+    padding: 2.4rem;
+    border-radius: 0 0 5rem 0;
+    z-index: 1;
+    pointer-events: all
+  }
+
+  .ly_globalHeaderNavi {
+    display: block;
+    padding: 0;
+    width: 100%;
+    height: 100%
+  }
+
+  .ly_globalHeaderNavi_menu {
+    display: block;
+    width: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 11.5rem 2.4rem 3.6rem;
+    pointer-events: auto;
+    background-color: #fff;
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%)
+  }
+
+  .ly_globalHeaderNavi_extArea {
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    padding: 3.6rem 0 0;
+    margin-bottom: 0;
+    margin-top: 2.2rem
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .ly_globalHeader_logo {
+    width: 100%;
+    padding: 1.5rem 1.1rem;
+    height: 100%;
+    -webkit-box-pack: start;
+    justify-content: flex-start
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .ly_globalHeaderNavi {
+    padding: 0
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .ly_globalHeaderNavi_menu {
+    display: block
+  }
+}
+
+.bl_globalHeaderLogo {
+  display: grid;
+  grid-template: 21.6rem 10.5rem/auto;
+  text-decoration: none;
+  color: #6a3906;
+  -webkit-box-align: center;
+  align-items: center
+}
+
+.bl_globalHeaderLogo:visited {
+  color: #6a3906
+}
+
+.bl_globalHeaderLogo_img {
+  display: block;
+  width: 21.6rem;
+  height: 21.6rem;
+  padding: 3.4rem 2.3rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 1.1rem;
+  position: relative
+}
+
+.bl_globalHeaderLogo_img::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain
+}
+
+.bl_globalHeaderLogo_text {
+  font-size: 3.6rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: .05em;
+  text-decoration: none;
+  text-transform: none;
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1.1rem;
+  white-space: nowrap
+}
+
+.bl_globalHeaderLogo_text span {
+  display: block
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderLogo {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 6.8rem 10.4rem
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderLogo_img {
+  width: 6.8rem;
+  height: 6.8rem;
+  padding: 0;
+  margin-bottom: 0
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderLogo_text {
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  text-align: left;
+  gap: 0;
+  margin-left: 1.1rem
+}
+
+@media screen and (max-width: 1150px) {
+  .bl_globalHeaderLogo {
+    display: grid;
+    grid-template: "bl_globalHeaderLogo_img" 16rem "bl_globalHeaderLogo_text" 10.5rem/auto;
+    text-decoration: none;
+    color: #6a3906
+  }
+
+  .bl_globalHeaderLogo:visited {
+    color: #6a3906
+  }
+
+  .bl_globalHeaderLogo_img {
+    display: block;
+    width: 16rem;
+    height: 16rem;
+    padding: 2.2rem 1.1rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-bottom: 1.1rem
+  }
+
+  .bl_globalHeaderLogo_text {
+    font-size: 3.6rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: .05em;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1.1rem
+  }
+
+  .bl_globalHeaderLogo_text span {
+    display: block;
+    white-space: nowrap
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .bl_globalHeaderLogo {
+    display: grid;
+    grid-template: "bl_globalHeaderLogo_img" 9rem "bl_globalHeaderLogo_text" 4.2rem/auto
+  }
+
+  .bl_globalHeaderLogo_img {
+    display: block;
+    width: 9rem;
+    height: 9rem;
+    padding: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-bottom: 1.2rem
+  }
+
+  .bl_globalHeaderLogo_text {
+    font-size: 1.6rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    gap: 0
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderLogo {
+    grid-template-columns: [bl_globalheaderlogo_img] 3.7rem [bl_globalheaderlogo_text] 16.4rem
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderLogo_img {
+    display: block;
+    width: 3.7rem;
+    height: 3.7rem;
+    margin-bottom: 0
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderLogo_text {
+    font-size: 1.6rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: .15em;
+    gap: 0;
+    margin-left: 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    padding-left: 1.2rem
+  }
+}
+
+.bl_globalHeaderNaviMenu {
+  display: block;
+  grid-column: 1;
+  grid-row: 2;
+  padding: 1.1rem 6.6rem 1.1rem 2.2rem
+}
+
+.bl_globalHeaderNaviMenuList {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-column-gap: 2.2rem
+}
+
+.bl_globalHeaderNaviMenuListItem {
+  display: contents
+}
+
+.bl_globalHeaderNaviMenuList_button {
+  font-size: 1.6rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 1rem 2rem .5rem;
+  color: #413b33;
+  position: relative;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms
+}
+
+.bl_globalHeaderNaviMenuList_button::before {
+  content: "";
+  width: .375rem;
+  height: .375rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #f39700;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms
+}
+
+.bl_globalHeaderNaviMenuList_button:visited {
+  color: #413b33
+}
+
+.bl_globalHeaderNaviMenuList_button:hover {
+  color: #f39700
+}
+
+.bl_globalHeaderNaviMenuList_button:hover::before {
+  opacity: 1
+}
+
+.bl_globalHeaderNaviMenuList_button[data-menu=home] {
+  display: none
+}
+
+[data-menu-active=message] .bl_globalHeaderNaviMenuList_button[data-menu=message],
+[data-menu-active=skin] .bl_globalHeaderNaviMenuList_button[data-menu=skin],
+[data-menu-active=news] .bl_globalHeaderNaviMenuList_button[data-menu=news] {
+  color: #f39700
+}
+
+[data-menu-active=message] .bl_globalHeaderNaviMenuList_button[data-menu=message]::before,
+[data-menu-active=skin] .bl_globalHeaderNaviMenuList_button[data-menu=skin]::before,
+[data-menu-active=news] .bl_globalHeaderNaviMenuList_button[data-menu=news]::before {
+  opacity: 1
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenu {
+  grid-column: auto;
+  grid-row: auto;
+  padding: 2rem 2.2rem
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList {
+  grid-template-columns: repeat(6, auto);
+  grid-column-gap: 0
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button {
+  white-space: nowrap
+}
+
+@media screen and (max-width: 1150px) {
+  .bl_globalHeaderNaviMenu {
+    padding: 1.1rem 2.2rem
+  }
+
+  .bl_globalHeaderNaviMenuList {
+    grid-template-columns: repeat(6, auto);
+    grid-column-gap: 0
+  }
+
+  .bl_globalHeaderNaviMenuList_button {
+    font-size: 1.4rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: none;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 1rem 1rem .5rem;
+    color: #413b33;
+    position: relative;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms
+  }
+
+  .bl_globalHeaderNaviMenuList_button::before {
+    content: "";
+    width: .375rem;
+    height: .375rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #f39700;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms
+  }
+
+  .bl_globalHeaderNaviMenuList_button:visited {
+    color: #413b33
+  }
+
+  .bl_globalHeaderNaviMenuList_button:hover {
+    color: #f39700
+  }
+
+  .bl_globalHeaderNaviMenuList_button:hover::before {
+    opacity: 1
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .bl_globalHeaderNaviMenu {
+    grid-row: 1;
+    padding: 0
+  }
+
+  .bl_globalHeaderNaviMenuList {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2.4rem
+  }
+
+  .bl_globalHeaderNaviMenuListItem {
+    display: block;
+    position: relative
+  }
+
+  .bl_globalHeaderNaviMenuListItem::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f39700), color-stop(0.4rem, #f39700), color-stop(0.4rem, transparent), color-stop(0.8rem, transparent));
+    background-image: -webkit-linear-gradient(left, #f39700, #f39700 0.4rem, transparent 0.4rem, transparent 0.8rem);
+    background-image: linear-gradient(to right, #f39700, #f39700 0.4rem, transparent 0.4rem, transparent 0.8rem);
+    background-size: .8rem 1px;
+    background-position: left bottom;
+    background-repeat: repeat-x
+  }
+
+  .bl_globalHeaderNaviMenuList_button {
+    font-size: 1.6rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    padding: 1.1rem 0;
+    color: #413b33;
+    position: relative;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms
+  }
+
+  .bl_globalHeaderNaviMenuList_button::before {
+    content: none
+  }
+
+  .bl_globalHeaderNaviMenuList_button:visited {
+    color: #413b33
+  }
+
+  .bl_globalHeaderNaviMenuList_button:hover {
+    color: #f39700
+  }
+
+  .bl_globalHeaderNaviMenuList_button:hover::before {
+    content: none
+  }
+
+  .bl_globalHeaderNaviMenuList_button[data-menu=home] {
+    display: block
+  }
+
+  .bl_globalHeaderNaviMenuList_button[data-menu=message]::before,
+  .bl_globalHeaderNaviMenuList_button[data-menu=skin]::before,
+  .bl_globalHeaderNaviMenuList_button[data-menu=news]::before {
+    content: none
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenu {
+    grid-row: 1;
+    padding: 0
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2.4rem
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuListItem {
+    display: block;
+    position: relative
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuListItem::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f39700), color-stop(0.4rem, #f39700), color-stop(0.4rem, transparent), color-stop(0.8rem, transparent));
+    background-image: -webkit-linear-gradient(left, #f39700, #f39700 0.4rem, transparent 0.4rem, transparent 0.8rem);
+    background-image: linear-gradient(to right, #f39700, #f39700 0.4rem, transparent 0.4rem, transparent 0.8rem);
+    background-size: .8rem 1px;
+    background-position: left bottom;
+    background-repeat: repeat-x
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button {
+    font-size: 1.6rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    padding: 1.1rem 0;
+    color: #413b33;
+    position: relative;
+    -webkit-transition: opacity 300ms;
+    transition: opacity 300ms
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button::before {
+    content: none
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button:visited {
+    color: #413b33
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button:hover {
+    color: #f39700
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button:hover::before {
+    content: none
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    width: .65rem;
+    height: 1.3rem;
+    background-image: url("../images/button_navi_arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button[data-menu=home] {
+    display: block
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button[data-menu=message]::before,
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button[data-menu=skin]::before,
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviMenuList_button[data-menu=news]::before {
+    content: none
+  }
+}
+
+.bl_globalHeaderNaviExtContactButton {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: color 300ms;
+  transition: color 300ms
+}
+
+.bl_globalHeaderNaviExtContactButton::before,
+.bl_globalHeaderNaviExtContactButton::after {
+  height: 6rem;
+  width: 4rem;
+  position: absolute;
+  content: "";
+  top: -0.4rem
+}
+
+.bl_globalHeaderNaviExtContactButton::before {
+  left: 5%;
+  background: #f39700;
+  border: 1px solid #f39700;
+  border-radius: 10rem 5rem;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transition: opacity 300ms, left 300ms;
+  transition: opacity 300ms, left 300ms
+}
+
+.bl_globalHeaderNaviExtContactButton::after {
+  right: 5%;
+  background: #433b2e;
+  border: 1px solid #f39700;
+  border-radius: 5rem 10rem;
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  -webkit-transition: opacity 300ms, right 300ms;
+  transition: opacity 300ms, right 300ms
+}
+
+.bl_globalHeaderNaviExtContactButton:visited {
+  color: #fff
+}
+
+.bl_globalHeaderNaviExtContactButton_inner {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  width: 27.5rem;
+  height: 7rem;
+  padding: .5rem 2.2rem;
+  background-color: #f39700;
+  border-radius: 5rem;
+  border: 1px solid #f39700;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms
+}
+
+.bl_globalHeaderNaviExtContactButtonTitle {
+  font-size: 1.2rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: .05em;
+  text-decoration: none;
+  text-transform: none;
+  margin-bottom: .3rem
+}
+
+.bl_globalHeaderNaviExtContactButton_detail {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center
+}
+
+.bl_globalHeaderNaviExtContactButtonText {
+  font-size: 1.7rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none
+}
+
+@media(hover: hover) {
+  .bl_globalHeaderNaviExtContactButton:hover {
+    color: #f39700
+  }
+
+  .bl_globalHeaderNaviExtContactButton:hover::before {
+    left: -5%;
+    z-index: 2
+  }
+
+  .bl_globalHeaderNaviExtContactButton:hover::after {
+    right: -5%;
+    z-index: 1
+  }
+
+  .bl_globalHeaderNaviExtContactButton:hover .bl_globalHeaderNaviExtContactButton_inner {
+    background-color: #fff
+  }
+
+  .bl_globalHeaderNaviExtContactButton:hover .bl_globalHeaderNaviExtContactButton_detail::before {
+    background-image: url("../images/button_tel_icon_orange.svg")
+  }
+}
+
+.bl_globalHeaderNaviExtMedicalHours {
+  margin-left: 3.3rem
+}
+
+.bl_globalHeaderNaviExtMedicalHoursList {
+  font-size: 1.2rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: .05em;
+  text-decoration: none;
+  text-transform: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  justify-content: flex-start
+}
+
+.bl_globalHeaderNaviExtMedicalHours_closedDays {
+  font-size: 1.2rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: .05em;
+  text-decoration: none;
+  text-transform: none
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviExtContactButton_inner {
+  width: 22.3rem;
+  height: 7.6rem;
+  padding: 1.1rem 2.2rem
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviExtContactButtonText {
+  font-size: 1.7rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none;
+  white-space: nowrap
+}
+
+[data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviExtMedicalHours {
+  display: none
+}
+
+@media(hover: hover) {
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviExtContactButton:hover::after {
+    right: -6.5%
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .bl_globalHeaderNaviExtContactButton {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: .5rem 2.2rem
+  }
+
+  .bl_globalHeaderNaviExtContactButton::before,
+  .bl_globalHeaderNaviExtContactButton::after {
+    content: none
+  }
+
+  .bl_globalHeaderNaviExtContactButton_inner {
+    width: 25.2rem;
+    height: 7rem;
+    padding: .5rem 2.2rem
+  }
+
+  .bl_globalHeaderNaviExtContactButtonTitle {
+    font-size: 1.2rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: .05em;
+    text-decoration: none;
+    text-transform: none;
+    margin-bottom: .3rem
+  }
+
+  .bl_globalHeaderNaviExtContactButtonText {
+    font-size: 2.4rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    white-space: nowrap
+  }
+
+  .bl_globalHeaderNaviExtMedicalHours {
+    margin-left: 0;
+    margin-top: 2.4rem
+  }
+
+  .bl_globalHeaderNaviExtMedicalHoursList {
+    font-size: 1.2rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: none
+  }
+
+  .bl_globalHeaderNaviExtMedicalHours_closedDays {
+    font-size: 1.2rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: none
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviExtContactButton_inner {
+    width: 25.2rem;
+    height: 7rem;
+    padding: .5rem 2.2rem
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviExtContactButtonText {
+    font-size: 2.4rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    white-space: nowrap
+  }
+
+  [data-bind-scroll-event-state=global-menu-transform] .bl_globalHeaderNaviExtMedicalHours {
+    display: block
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ly_globalHeaderNavi_button {
+    position: absolute;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: 1.5rem;
+    right: 1.1rem;
+    z-index: 1
+  }
+
+  .ly_globalHeaderNaviButtons {
+    display: grid;
+    grid-template: auto/auto auto;
+    pointer-events: auto;
+    grid-column-gap: 1.2rem
+  }
+
+  .bl_globalNaviMenuButton,
+  .bl_globalNaviCloseButton {
+    display: -webkit-box;
+    display: flex;
+    width: 4.6rem;
+    height: 4.5rem;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    pointer-events: auto;
+    background-color: #f39700;
+    border-radius: .5rem
+  }
+
+  .bl_globalNaviTelButton::before {
+    display: block;
+    content: "";
+    background-image: url("../images/yellow_phone.png");
+    width: 4.4rem;
+    height: 4.375rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center
+  }
+
+  .bl_globalNaviCloseButton::before {
+    display: block;
+    content: "";
+    background-image: url("../images/close-icon.svg");
+    width: 3.8rem;
+    height: 3.8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center
+  }
+
+  .bl_globalNaviTelButton {
+    pointer-events: auto
+  }
+
+  .bl_globalNaviMenuButton {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 4.6rem;
+    height: 4.5rem;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+
+  .bl_globalNaviMenuButton::before {
+    display: block;
+    content: "";
+    background-image: url("../images/menu-button-icon.svg");
+    width: 1.9rem;
+    height: 1.5833rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center
+  }
+
+  .bl_globalNaviCloseButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateY(-12rem);
+    transform: translateY(-12rem);
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms
+  }
+}
+
+.el_globalNaviOpenedInput {
+  display: none
+}
+
+@media screen and (max-width: 800px) {
+  input#globalNaviOpenedInput:checked+.ly_globalHeader {
+    background-color: #fff
+  }
+
+  input#globalNaviOpenedInput:checked+.ly_globalHeader .ly_globalHeader_logo {
+    width: 100%;
+    -webkit-box-pack: start;
+    justify-content: flex-start
+  }
+
+  input#globalNaviOpenedInput:checked+.ly_globalHeader .bl_globalHeaderLogo {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center
+  }
+
+  input#globalNaviOpenedInput:checked+.ly_globalHeader .bl_globalHeaderLogo_img {
+    grid-row: 1;
+    grid-column: "bl_globalHeaderLogo_img";
+    width: 3.7rem;
+    height: 3.7rem;
+    margin-bottom: 0
+  }
+
+  input#globalNaviOpenedInput:checked+.ly_globalHeader .bl_globalHeaderLogo_text {
+    grid-row: 1;
+    grid-column: "bl_globalHeaderLogo_text";
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    padding-left: 1.2rem
+  }
+
+  input#globalNaviOpenedInput:checked+.ly_globalHeader .ly_globalHeaderNavi {
+    pointer-events: all
+  }
+
+  input#globalNaviOpenedInput:checked+.ly_globalHeader .ly_globalHeaderNavi_menu {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+
+  input#globalNaviOpenedInput:checked+.ly_globalHeader .bl_globalNaviMenuButton {
+    -webkit-transform: translateY(-8rem);
+    transform: translateY(-8rem)
+  }
+
+  input#globalNaviOpenedInput:checked+.ly_globalHeader .bl_globalNaviCloseButton {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+.ly_topPageMainContents {
+  padding: 17.6rem 0
+}
+
+.ly_subPageMainContents {
+  padding: 13.2rem 0 17.6rem
+}
+
+.ly_mainContents {
+  padding: 29.6rem 0 17.6rem
+}
+
+@media screen and (max-width: 800px) {
+  .ly_topPageMainContents {
+    padding: 9.6rem 0
+  }
+
+  .ly_subPageMainContents {
+    padding: 9.6rem 2.4rem
+  }
+
+  .ly_mainContents {
+    padding: 9.6rem 0
+  }
+}
+
+.ly_rootLayout_footContents {
+  position: relative;
+  padding: 8.8rem
+}
+
+.ly_footContents {
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 15rem;
+  padding: 8.8rem 2rem;
+  margin: auto
+}
+
+.ly_footContents_centering {
+  max-width: 112.4rem;
+  padding: 0 2.2rem;
+  margin: auto
+}
+
+.bl_footContentsTitle {
+  margin-bottom: 11rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center
+}
+
+.bl_footContentsTitle::after {
+  font-size: 1.8rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none;
+  content: attr(data-en);
+  display: block;
+  margin-top: 2.2rem;
+  color: #f39700
+}
+
+@media screen and (max-width: 800px) {
+  .bl_footContentsTitle {
+    margin-bottom: 4.8rem
+  }
+
+  .bl_footContentsTitle::after {
+    font-size: 1.6rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    margin-top: 2.4rem
+  }
+}
+
+.bl_footContentsTitleText {
+  font-size: 3rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .2em;
+  text-decoration: none;
+  text-transform: none;
+  color: #f39700
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .bl_footContentsTitleText {
+    font-size: 2.2rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none
+  }
+
+}
+
+.bl_footContents_figure {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-bottom: 6.6rem
+}
+
+.bl_footContentsPicture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5rem
+}
+
+.bl_footContentsInformation {
+  display: grid;
+  grid-template-columns: 48.5rem 52.9rem;
+  grid-column-gap: 6.6rem;
+  grid-row-gap: 4.7rem
+}
+
+.bl_footContentsInformation_medicalHours {
+  grid-column: 1;
+  grid-row: 1
+}
+
+.bl_footContentsInformation_map {
+  width: 100%;
+  height: 100%;
+  grid-column: 2;
+  grid-row: 1/3
+}
+
+.bl_footContentsGoogleMap {
+  display: block;
+  width: 100%;
+  height: 100%
+}
+
+.ly_footContentsContact_button {
+  grid-column: 1;
+  grid-row: 2
+}
+
+@media screen and (max-width: 1440px) {
+  .bl_footContentsInformation {
+    grid-template-columns: auto minmax(52.9rem, 1fr);
+    grid-column-gap: 6.6rem
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .bl_footContentsInformation {
+    grid-template-columns: auto;
+    grid-row-gap: 6.6rem
+  }
+
+  .bl_footContentsInformation_medicalHours {
+    grid-column: 1/3;
+    grid-row: 1;
+    margin: auto
+  }
+
+  .bl_footContentsInformation_map {
+    grid-column: 1/3;
+    grid-row: 3;
+    height: 48.5rem
+  }
+
+  .ly_footContentsContact_button {
+    grid-column: 1/3;
+    grid-row: 2;
+    margin: auto
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .ly_rootLayout_footContents {
+    position: relative;
+    padding: 6rem 2.4rem
+  }
+
+  .ly_footContents {
+    border-radius: 5rem;
+    padding: 3.6rem 1.2rem
+  }
+
+  .ly_footContents_centering {
+    padding: 0
+  }
+
+  .bl_footContentsTitle {
+    margin-bottom: 3.6rem
+  }
+
+  .bl_footContents_figure {
+    margin-bottom: 3.6rem
+  }
+
+  .bl_footContentsPicture {
+    border-radius: 2.5rem
+  }
+
+  .bl_footContentsInformation {
+    grid-template-columns: 1fr;
+    grid-row-gap: 3.6rem
+  }
+
+  .bl_footContentsInformation_medicalHours {
+    grid-column: auto;
+    grid-row: auto
+  }
+
+  .bl_footContentsInformation_map {
+    width: 100%;
+    height: 24.8rem;
+    grid-column: auto;
+    grid-row: auto
+  }
+
+  .ly_footContentsContact_button {
+    grid-column: auto;
+    grid-row: auto
+  }
+}
+
+.bl_footContentsMedicalHoursList {
+  border-top: 1px solid #413b33;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 2.2rem
+}
+
+.bl_footContentsMedicalHoursList_row {
+  display: grid;
+  grid-template-columns: 9.7rem repeat(8, 4.85rem);
+  border-bottom: 1px solid #413b33
+}
+
+.bl_footContentsMedicalHours_time {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  letter-spacing: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 1rem .5rem;
+  white-space: nowrap
+}
+
+.bl_footContentsMedicalHours_week {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  letter-spacing: 0;
+  border-left: 1px solid #413b33;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 1rem
+}
+
+.bl_footContentsMedicalHours_description__unchecked,
+.bl_footContentsMedicalHours_description__checked {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  letter-spacing: 0;
+  border-left: 1px solid #413b33;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative
+}
+
+.bl_footContentsMedicalHours_description__checked {
+  color: transparent
+}
+
+.bl_footContentsMedicalHours_description__checked::before {
+  position: absolute;
+  content: "";
+  width: 1.8em;
+  height: 1.8em;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-image: url("../images/foot-contents/dot.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center
+}
+
+.bl_footContentsMedicalHours_description__unchecked {
+  color: inherit
+}
+
+.bl_footContentsMedicalHours_notes {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none
+}
+
+.bl_footContentsMedicalHours_payment {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-auto-rows: auto;
+  padding-top: 2.2rem
+}
+
+.bl_footContentsMedicalHours_payment_title {
+  display: block
+}
+
+.bl_footContentsMedicalHours_payment_body {
+  display: block
+}
+
+.bl_footContentsMedicalHours_address {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none;
+  padding-top: 2.2rem
+}
+
+.el_footContentsMedicalHours_address_parking {
+  display: block;
+  padding-left: 3.5em;
+  font-size: inherit
+}
+
+.bl_footContentsMedicalHours_targetAnimal {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none;
+  padding-top: 2.2rem
+}
+
+@media screen and (max-width: 1150px) {
+  .bl_footContentsMedicalHoursList_row {
+    grid-template-columns: 20.1rem repeat(8, 4.85rem)
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .bl_footContentsMedicalHoursList {
+    width: 100%;
+    padding-bottom: 2.4rem
+  }
+
+  .bl_footContentsMedicalHoursList_row {
+    display: grid;
+    grid-template-columns: 10.5rem repeat(8, 2.475rem)
+  }
+
+  .bl_footContentsMedicalHours_time {
+    font-size: 1.4rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: none;
+    padding: 1rem .5rem
+  }
+
+  .bl_footContentsMedicalHours_week {
+    font-size: 1.4rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: none;
+    padding: 1rem
+  }
+
+  .bl_footContentsMedicalHours_description {
+    font-size: 1.4rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: none;
+    padding: 1rem
+  }
+
+  .bl_footContentsMedicalHours_notes {
+    font-size: 1.4rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: none
+  }
+
+  .bl_footContentsMedicalHours_payment {
+    font-size: 1.4rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: none;
+    display: block
+  }
+
+  .bl_footContentsMedicalHours_payment_title {
+    display: inline-block
+  }
+
+  .bl_footContentsMedicalHours_payment_body {
+    display: inline
+  }
+
+  .bl_footContentsMedicalHours_address {
+    font-size: 1.4rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: none;
+    padding-top: 2.4rem
+  }
+
+  .el_footContentsMedicalHours_address_parking {
+    display: inline-block;
+    padding: 0
+  }
+
+  .el_footContentsMedicalHours_address_parking::before {
+    content: "（"
+  }
+
+  .el_footContentsMedicalHours_address_parking::after {
+    content: "）"
+  }
+
+  .bl_footContentsMedicalHours_targetAnimal {
+    font-size: 1.4rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: none
+  }
+}
+
+.bl_footContentsContactButton {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  display: block
+}
+
+.bl_footContentsContactButton::before,
+.bl_footContentsContactButton::after {
+  height: 8rem;
+  width: 6rem;
+  position: absolute;
+  content: "";
+  top: -0.4rem
+}
+
+.bl_footContentsContactButton::before {
+  left: 5%;
+  background: #f39700;
+  border: 1px solid #f39700;
+  border-radius: 10rem 5rem;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transition: opacity 300ms, left 300ms;
+  transition: opacity 300ms, left 300ms
+}
+
+.bl_footContentsContactButton::after {
+  right: 5%;
+  background: #433b2e;
+  border: 1px solid #f39700;
+  border-radius: 5rem 10rem;
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  -webkit-transition: opacity 300ms, right 300ms;
+  transition: opacity 300ms, right 300ms
+}
+
+.bl_footContentsContactButton:visited {
+  color: #fff
+}
+
+.bl_footContentsContactButton_inner {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  width: 50.5rem;
+  height: 9.6rem;
+  padding: .5rem 2.2rem;
+  background-color: #f39700;
+  border-radius: 5rem;
+  border: 1px solid #f39700;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms
+}
+
+.bl_footContentsContactButtonTitle {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none;
+  margin-bottom: .15rem
+}
+
+.bl_footContentsContactButton_detail {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center
+}
+
+.bl_footContentsContactButton_detail::before {
+  content: "";
+  width: 4.8rem;
+  height: 4.8rem;
+  display: block;
+  background-image: url("../images/button_tel_icon.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 1.1rem
+}
+
+.bl_footContentsContactButtonText {
+  font-size: 2.8rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .2em;
+  text-decoration: none;
+  text-transform: none
+}
+
+@media(hover: hover) {
+  .bl_footContentsContactButton:hover {
+    color: #f39700
+  }
+
+  .bl_footContentsContactButton:hover::before {
+    left: -5%;
+    z-index: 2
+  }
+
+  .bl_footContentsContactButton:hover::after {
+    right: -8%;
+    z-index: 1
+  }
+
+  .bl_footContentsContactButton:hover .bl_footContentsContactButton_inner {
+    background-color: #fff
+  }
+
+  .bl_footContentsContactButton:hover .bl_footContentsContactButton_detail::before {
+    background-image: url("../images/button_tel_icon_orange.svg")
+  }
+}
+
+@media screen and (max-width: 1440px)and (hover: hover) {
+  .bl_footContentsContactButton:hover::after {
+    right: -4%
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .bl_footContentsContactButton::before,
+  .bl_footContentsContactButton::after {
+    content: none
+  }
+
+  .bl_footContentsContactButton_inner {
+    width: 100%;
+    height: 8.8rem;
+    padding: 1.1rem 3.3rem;
+    -webkit-transition: background-color 300ms;
+    transition: background-color 300ms
+  }
+
+  .bl_footContentsContactButtonTitle {
+    font-size: 1.6rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    margin-bottom: .25rem
+  }
+
+  .bl_footContentsContactButton_detail::before {
+    width: 4rem;
+    height: 4rem
+  }
+
+  .bl_footContentsContactButtonText {
+    font-size: 1.7rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none
+  }
+}
+
+.bl_footContentsBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none
+}
+
+.bl_footContentsBackground_item {
+  display: contents
+}
+
+.bl_footContentsBackgroundSquare__01 {
+  position: absolute;
+  top: .9rem;
+  left: 0
+}
+
+.bl_footContentsBackgroundSquare__02 {
+  position: absolute;
+  top: 5.4rem;
+  right: 0
+}
+
+.bl_footContentsBackgroundSquare__03 {
+  position: absolute;
+  top: 40.11rem;
+  right: 0
+}
+
+.bl_footContentsBackgroundSquare__04 {
+  position: absolute;
+  bottom: 0;
+  left: 0
+}
+
+.bl_footContentsBackgroundSquare__05 {
+  position: absolute;
+  bottom: 6.2rem;
+  right: 0
+}
+
+.bl_footContentsBackgroundCat {
+  position: absolute;
+  top: -5.4rem;
+  left: 39.5rem;
+  z-index: 20
+}
+
+.bl_footContentsBackgroundFootprints {
+  position: absolute;
+  top: 13.7rem;
+  left: 19.8rem;
+  z-index: 20
+}
+
+.bl_footContentsBackgroundPicture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain
+}
+
+@media screen and (max-width: 1150px) {
+  .bl_aboutBackgroundSquare__01 {
+    top: 2rem;
+    left: 0
+  }
+
+  .bl_footContentsBackgroundSquare__02 {
+    position: absolute;
+    top: 34.8rem;
+    right: 0
+  }
+
+  .bl_footContentsBackgroundSquare__03 {
+    position: absolute;
+    top: 55.5rem;
+    right: 0
+  }
+
+  .bl_footContentsBackgroundSquare__04 {
+    position: absolute;
+    bottom: 0;
+    left: 0
+  }
+
+  .bl_footContentsBackgroundSquare__05 {
+    position: absolute;
+    bottom: 13.39rem;
+    right: 0
+  }
+
+  .bl_footContentsBackgroundCat {
+    width: 16rem;
+    left: 28.5rem
+  }
+
+  .bl_footContentsBackgroundFootprints {
+    left: 12.8rem;
+    width: 14rem
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .bl_footContentsBackgroundCat {
+    top: -2.84rem;
+    left: 2.84rem;
+    width: 10.9rem;
+    height: 13.8rem
+  }
+
+  .bl_footContentsBackgroundFootprints {
+    top: 8.35rem;
+    left: .88rem;
+    height: 6.5rem;
+    width: 3.9rem
+  }
+}
+
+.ly_rootFooter {
+  max-width: 112.4rem;
+  padding: 0 2.2rem;
+  margin: auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center
+}
+
+.ly_commonFooter_logo {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center
+}
+
+.bl_commonFooterNavi {
+  display: block;
+  width: 82.7rem;
+  margin-left: 8.8rem;
+  padding-top: 2.2rem
+}
+
+.bl_rootFooterCopyRight {
+  font-size: 1.2rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: .05em;
+  text-decoration: none;
+  text-transform: none;
+  padding-top: 1.1rem;
+  text-align: center
+}
+
+@media screen and (max-width: 800px) {
+  .ly_rootFooter {
+    padding: 4.8rem 0 2.4rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column
+  }
+
+  .bl_commonFooterNavi {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 3.6rem
+  }
+
+  .bl_rootFooterCopyRight {
+    font-size: 1.2rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 130%;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: none;
+    padding-top: 3.6rem
+  }
+}
+
+.bl_commonFooterLogo {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #6a3906;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms
+}
+
+.bl_commonFooterLogo:visited {
+  color: #6a3906
+}
+
+.bl_commonFooterLogo:hover {
+  opacity: .7
+}
+
+.bl_commonFooterLogo_img {
+  width: 7.8rem;
+  height: 7.8rem;
+  flex-shrink: 0
+}
+
+.bl_commonFooterLogo_text {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: .14rem;
+  padding-left: 1.1rem;
+  white-space: nowrap
+}
+
+@media screen and (max-width: 800px) {
+  .bl_commonFooterLogo_img {
+    width: 6rem;
+    height: 6rem
+  }
+
+  .bl_commonFooterLogo_text {
+    font-size: 1.8rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row
+  }
+}
+
+.bl_commonFooterMenuList {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  height: 7.8rem;
+  -webkit-box-align: center;
+  align-items: center
+}
+
+.bl_commonFooterMenuList_item {
+  display: block
+}
+
+.bl_commonFooterMenuList_item_link {
+  font-size: 1.4rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .1em;
+  text-decoration: none;
+  text-transform: none;
+  display: block;
+  padding: 0 2.2rem;
+  text-decoration: none;
+  color: #6a3906;
+  text-underline-offset: .5em
+}
+
+.bl_commonFooterMenuList_item_link:visited {
+  color: #6a3906
+}
+
+.bl_commonFooterMenuList_item_link:hover {
+  text-decoration: underline
+}
+
+@media screen and (max-width: 800px) {
+  .bl_commonFooterMenuList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: auto;
+    grid-column-gap: 4.8rem;
+    grid-row-gap: 1.2rem
+  }
+
+  .bl_commonFooterMenuList_item {
+    position: relative
+  }
+
+  .bl_commonFooterMenuList_item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#f39700), color-stop(0.4rem, #f39700), color-stop(0.4rem, transparent), color-stop(0.8rem, transparent));
+    background-image: -webkit-linear-gradient(left, #f39700, #f39700 0.4rem, transparent 0.4rem, transparent 0.8rem);
+    background-image: linear-gradient(to right, #f39700, #f39700 0.4rem, transparent 0.4rem, transparent 0.8rem);
+    background-size: .8rem 1px;
+    background-repeat: repeat-x
+  }
+
+  .bl_commonFooterMenuList_item_link {
+    font-size: 1.4rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: none;
+    padding: 1.1rem 0;
+    position: relative;
+    display: block
+  }
+
+  .bl_commonFooterMenuList_item_link::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    width: .65rem;
+    height: 1.3rem;
+    background-image: url("../images/button_navi_arrow_brown.svg");
+    background-size: contain;
+    background-repeat: no-repeat
+  }
+}
+
+.spBr {
+  display: none
+}
+
+.pcBr {
+  display: block
+}
+
+@media screen and (max-width: 800px) {
+  .spBr {
+    display: block
+  }
+
+  .pcBr {
+    display: none
+  }
+}
+
+.bl_commonReturnToTop {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-top: 8.8rem
+}
+
+.bl_commonReturnToTopButton {
+  color: #f39700;
+  text-underline-offset: .3em
+}
+
+.bl_commonReturnToTopButton::before {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  height: 2.7857rem;
+  background-image: url("../images/return-to-top.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto 2.2rem
+}
+
+@media screen and (max-width: 800px) {
+  .bl_commonReturnToTop {
+    padding-top: 9.6rem;
+    position: relative;
+    z-index: 1
+  }
+
+  .bl_commonReturnToTopButton::before {
+    margin: 0 auto 1.2rem
+  }
+}
+
+.ly_notFoundSection {
+  padding: 29.6rem 0 17.6rem;
+  background-color: #fff
+}
+
+.ly_notFoundSection a {
+  color: #f39700
+}
+
+.ly_notFoundSection a:visited {
+  color: #f39700
+}
+
+.ly_notFoundSection a:hover {
+  color: #413b33
+}
+
+.bl_notFoundSectionTitle {
+  font-size: 3.2rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 180%;
+  letter-spacing: .2em;
+  text-decoration: none;
+  text-transform: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  margin-bottom: 11rem
+}
+
+.bl_notFoundSectionTitle::after {
+  font-size: 1.8rem;
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none;
+  content: attr(data-en);
+  display: block;
+  color: #f39700;
+  padding-top: 1.1rem
+}
+
+@media screen and (max-width: 800px) {
+  .bl_notFoundSectionTitle {
+    font-size: 2.6rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    padding: 1.2rem 0
+  }
+
+  .bl_notFoundSectionTitle::after {
+    font-size: 1.4rem;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+    letter-spacing: .21rem;
+    text-decoration: none;
+    text-transform: none;
+    padding-top: 1.2rem
+  }
+}
+
+.ly_notFoundSection_centering {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center
+}
+
+.bl_notFoundSection_text {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 160%;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: none;
+  margin-bottom: 2.2rem
+}
+
+.bl_notFoundSection_text:nth-last-child(1) {
+  margin-bottom: 0
+}
+
+.bl_notFoundSection_list {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 180%;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  list-style: none;
+  margin-bottom: 2.2rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column
+}
+
+.bl_notFoundSection_list li {
+  position: relative;
+  padding-left: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content
+}
+
+.bl_notFoundSection_list li::before {
+  content: "";
+  width: .3em;
+  height: .3em;
+  border-radius: 50%;
+  background-color: #413b33;
+  position: absolute;
+  left: .1em;
+  top: .8em
+}
+
+@media screen and (max-width: 800px) {
+  .ly_notFoundSection {
+    padding: 12.3rem 2.4rem 9.6rem
+  }
+
+  .bl_notFoundSectionTitle {
+    margin-bottom: 4.8rem
+  }
+
+  .ly_notFoundSection_centering {
+    text-align: left
+  }
+
+  .bl_notFoundSection_text {
+    font-size: 1.6rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+    letter-spacing: .15em;
+    text-decoration: none;
+    text-transform: none;
+    margin-bottom: 1.2rem
+  }
+
+  .bl_notFoundSection_list {
+    font-size: 1.6rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 180%;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: none;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    margin-bottom: 1.2rem
+  }
+
+  .bl_notFoundSection_list li {
+    width: 100%
+  }
+}
