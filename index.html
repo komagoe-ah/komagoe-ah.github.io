@@ -32,6 +32,10 @@
 
   <link type="text/css" href="styles/index.css" rel="stylesheet">
   <script src="scripts/index.js" async></script>
+
+  <script src="assets/animate.js?v=26875063070584736981758960257" defer=""></script>
+  <link href="assets/animate.css?v=72718667671516740261758960257" rel="stylesheet" type="text/css" media="all">
+
   <link rel="icon" href="common/images/favicon.ico">
 </head>
 
@@ -67,7 +71,7 @@
               </div>
             </div>
           </a>
-          <div class="bl_globalHeaderNaviExtMedicalHours">
+          <div class="bl_globalHeaderNaviExtMedicalHours reveal_tran_bt">
             <dl class="bl_globalHeaderNaviExtMedicalHoursList">
               <dt>診療時間／</dt>
               <dd>
@@ -76,7 +80,7 @@
                 <p>受付は診察終了30分前まで</p>
               </dd>
             </dl>
-            <p class="bl_globalHeaderNaviExtMedicalHours_closedDays">休診日: 日曜日午後・祝日</p>
+            <p class="bl_globalHeaderNaviExtMedicalHours_closedDays reveal_tran_tb">休診日: 日曜日午後・祝日</p>
           </div>
         </div>
       </div>
@@ -94,27 +98,31 @@
 <section class="ly_mainVisualSection">
   <div class="ly_mainVisual">
     <picture class="bl_mainVisualItem">
-      <source srcset="./images/main-visual/main-visual01.jpg" media="screen and (max-width: 800px)">
-      <img class="bl_mainVisualPicture" src="images/main-visual/main-visual01.jpg" alt="メインビジュアル画像1枚目">
-    </picture>
-    <picture class="bl_mainVisualItem">
       <source srcset="./images/main-visual/main-visual02.jpg" media="screen and (max-width: 800px)">
       <img class="bl_mainVisualPicture" src="images/main-visual/main-visual02.jpg" alt="メインビジュアル画像2枚目">
     </picture>
+    <picture class="bl_mainVisualItem">
+      <source srcset="./images/main-visual/main-visual04.jpg" media="screen and (max-width: 800px)">
+      <img class="bl_mainVisualPicture" src="images/main-visual/main-visual04.jpg" alt="メインビジュアル画像3枚目">
+    </picture>
+    <picture class="bl_mainVisualItem">
+      <source srcset="./images/main-visual/main-visual01.jpeg" media="screen and (max-width: 800px)">
+      <img class="bl_mainVisualPicture" src="images/main-visual/main-visual01.jpeg" alt="メインビジュアル画像1枚目">
+    </picture>
   </div>
-  <div class="bl_mainVisualBackground">
+  <div class="bl_mainVisualBackground reveal_tran_lr">
     <div class="bl_mainVisualBackground_item">
       <picture class="bl_mainVisualBackgroundSquare__01">
         <img class="bl_mainVisualBackgroundPicture" src="images/main-visual/bg_pops01.png" alt="">
       </picture>
     </div>
-    <div class="bl_mainVisualBackground_item">
+    <div class="bl_mainVisualBackground_item reveal_tran_rl">
       <picture class="bl_mainVisualBackgroundSquare__02">
         <source srcset="./images/main-visual/bg_pops02.png" media="screen and (max-width: 800px)">
         <img class="bl_mainVisualBackgroundPicture" src="images/main-visual/bg_pops02.png" alt="">
       </picture>
     </div>
-    <div class="bl_mainVisualBackground_item">
+    <div class="bl_mainVisualBackground_item reveal_tran_lr">
       <picture class="bl_mainVisualBackgroundSquare__03">
         <source srcset="./images/main-visual/bg_pops03.png" media="screen and (max-width: 800px)">
         <img class="bl_mainVisualBackgroundPicture" src="images/main-visual/bg_pops03.png" alt="">
@@ -126,11 +134,18 @@
   <div class="ly_gotoTopButtonArea">
     <div class="ly_topPageMainContents">
       <section class="ly_topPageAboutSection">
-        <div class="bl_topPageAboutSectionTitle" data-en="About" id="about">
+        <div class="bl_topPageAboutSectionTitle reveal_tran_bt" data-en="About" id="about">
           <h2 class="bl_topPageAboutSectionTitleText">こまごえ動物病院について</h2>
         </div>
-        <div class="ly_topPageAboutSectionMessage">
+        <div class="ly_topPageAboutSectionMessage  reveal_tran_tb">
           <p class="bl_topPageAboutSectionMessageText">当院は地域に親しまれるホームドクターを目指し、獣医師2名、看護スタッフ5名にて暖かい雰囲気作りに努めております。人の生活に沢山の喜びや、潤いを与えてくれる動物達が、ご家族の良き伴侶として健康に生活できる様サポート致します。</p>
+        </div>
+      </section>
+      <section class="topPageAboutImages">
+        <div class="topPageAboutImages">
+          <img class="topPageAboutImageLeft reveal_tran_lr" src="./images/about/about_01.jpg" alt="ペットイメージ画像1">
+          <img class="topPageAboutImageRight reveal_tran_tb" src="./images/about/about_02.jpg" alt="ペットイメージ画像2">
+          <img class="topPageAboutImageLeft reveal_tran_rl" src="./images/about/about_03.jpg" alt="ペットイメージ画像3">
         </div>
       </section>
     </div>
@@ -139,15 +154,15 @@
 <div class="ly_rootLayout_footContents">
   <div class="ly_footContents">
     <div class="ly_footContents_centering">
-      <div class="bl_footContentsTitle" data-en="Information" id="guide">
+      <div class="bl_footContentsTitle reveal_tran_bt" data-en="Information" id="guide">
         <h2 class="bl_footContentsTitleText">診療案内</h2>
       </div>
-      <figure class="bl_footContents_figure">
+      <figure class="bl_footContents_figure reveal_tran_tb">
         <img class="bl_footContentsPicture" src="common/images/clinic_interior.jpeg" alt="こまごえ動物病院内観写真">
       </figure>
       <div class="bl_footContentsInformation">
         <div class="bl_footContentsInformation_medicalHours">
-          <dl class="bl_footContentsMedicalHoursList">
+          <dl class="bl_footContentsMedicalHoursList reveal_tran_rl">
             <div class="bl_footContentsMedicalHoursList_row">
               <dt class="bl_footContentsMedicalHours_time">診療時間</dt>
               <dt class="bl_footContentsMedicalHours_week">月</dt>
@@ -182,11 +197,11 @@
               <dd class="bl_footContentsMedicalHours_description__unchecked">-</dd>
             </div>
           </dl>
-          <p class="bl_footContentsMedicalHours_notes">受付は診察終了30分前まで</p>
-          <p class="bl_footContentsMedicalHours_notes">休診日: 日曜日午後・祝日</p>
-          <p class="bl_footContentsMedicalHours_payment"><span class="bl_footContentsMedicalHours_payment_title">支払い方法：</span><span class="bl_footContentsMedicalHours_payment_body">現金・クレジットカード(JCB、VISA、Mastercard、AMEX、Diners)・PayPay<br>ペット保険対応(アニコム、ipet)</span></p>
-          <p class="bl_footContentsMedicalHours_address">住所: 〒424-0904 静岡県静岡市清水区駒越中2-4-34<span class="el_footContentsMedicalHours_address_parking">駐車スペース6台分あり</span></p>
-          <p class="bl_footContentsMedicalHours_targetAnimal">対象動物：犬 猫</p>
+          <p class="bl_footContentsMedicalHours_notes reveal_tran_rl">受付は診察終了30分前まで</p>
+          <p class="bl_footContentsMedicalHours_notes reveal_tran_lr">休診日: 日曜日午後・祝日</p>
+          <p class="bl_footContentsMedicalHours_payment reveal_tran_rl"><span class="bl_footContentsMedicalHours_payment_title">支払い方法：</span><span class="bl_footContentsMedicalHours_payment_body">現金・クレジットカード(JCB、VISA、Mastercard、AMEX、Diners)・PayPay<br>ペット保険対応(アニコム、ipet)</span></p>
+          <p class="bl_footContentsMedicalHours_address reveal_tran_lr">住所: 〒424-0904 静岡県静岡市清水区駒越中2-4-34<span class="el_footContentsMedicalHours_address_parking">駐車スペース6台分あり</span></p>
+          <p class="bl_footContentsMedicalHours_targetAnimal reveal_tran_rl">対象動物：犬 猫</p>
         </div>
         <div class="bl_footContentsInformation_map" id="access">
           <iframe class="bl_footContentsGoogleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4107.638266198895!2d138.48930925598106!3d34.97955728887832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a30deb35913fd%3A0xee506012e6f26697!2z44CSNDI0LTA5MDQgU2hpenVva2EsIFNoaW1penUgV2FyZCwgS29tYWdvZW5ha2EsIDItY2jFjW1l4oiSNOKIkjM0IOOBk-OBvuOBlOOBiOWLleeJqeeXhemZog!5e1!3m2!1sen!2sjp!4v1760334915304!5m2!1sen!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -207,31 +222,31 @@
     <div class="bl_footContentsBackground_item">
       <picture class="bl_footContentsBackgroundSquare__01">
         <source srcset="/common/images/foot-contents/bg_pops01.png" media="screen and (max-width: 800px)">
-        <img class="bl_footContentsBackgroundPicture" src="common/images/foot-contents/bg_pops01.png" alt="">
+        <img class="bl_footContentsBackgroundPicture reveal_tran_lr" src="common/images/foot-contents/bg_pops01.png" alt="">
       </picture>
     </div>
     <div class="bl_footContentsBackground_item">
       <picture class="bl_footContentsBackgroundSquare__02">
         <source srcset="/common/images/foot-contents/bg_pops02.png" media="screen and (max-width: 800px)">
-        <img class="bl_footContentsBackgroundPicture" src="common/images/foot-contents/bg_pops02.png" alt="">
+        <img class="bl_footContentsBackgroundPicture reveal_tran_rl" src="common/images/foot-contents/bg_pops02.png" alt="">
       </picture>
     </div>
     <div class="bl_footContentsBackground_item">
       <picture class="bl_footContentsBackgroundSquare__03">
         <source srcset="/common/images/foot-contents/bg_pops03.png" media="screen and (max-width: 800px)">
-        <img class="bl_footContentsBackgroundPicture" src="common/images/foot-contents/bg_pops03.png" alt="">
+        <img class="bl_footContentsBackgroundPicture reveal_tran_lr" src="common/images/foot-contents/bg_pops03.png" alt="">
       </picture>
     </div>
     <div class="bl_footContentsBackground_item">
       <picture class="bl_footContentsBackgroundSquare__04">
         <source srcset="/common/images/foot-contents/bg_pops04.png" media="screen and (max-width: 800px)">
-        <img class="bl_footContentsBackgroundPicture" src="common/images/foot-contents/bg_pops04.png" alt="">
+        <img class="bl_footContentsBackgroundPicture reveal_tran_rl" src="common/images/foot-contents/bg_pops04.png" alt="">
       </picture>
     </div>
     <div class="bl_footContentsBackground_item">
       <picture class="bl_footContentsBackgroundSquare__05">
         <source srcset="/common/images/foot-contents/bg_pops05.png" media="screen and (max-width: 800px)">
-        <img class="bl_footContentsBackgroundPicture" src="common/images/foot-contents/bg_pops05.png" alt="">
+        <img class="bl_footContentsBackgroundPicture reveal_tran_lr" src="common/images/foot-contents/bg_pops05.png" alt="">
       </picture>
     </div>
   </div>
