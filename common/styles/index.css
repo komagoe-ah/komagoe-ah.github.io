@@ -2155,7 +2155,7 @@ dl {
 
 .bl_commonFooterMenuList {
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(4, auto);
   height: 7.8rem;
   -webkit-box-align: center;
   align-items: center

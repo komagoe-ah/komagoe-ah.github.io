@@ -1421,10 +1421,17 @@
 section.topPageAboutImages {
   position: relative;
 }
+
+.topPageAboutImages {
+  display: flex;
+  flex-direction: column;
+}
+
 .topPageAboutImages>img {
   width: 80%;
   max-width: 800px;
   padding-bottom: 3rem;
+  display: block;
 }
 .topPageAboutImageLeft {
   margin-right: auto;
@@ -1435,3 +1442,4 @@ section.topPageAboutImages {
   border-radius: 7.5rem 0 0 7.5rem;
   float: right;
 }
+
