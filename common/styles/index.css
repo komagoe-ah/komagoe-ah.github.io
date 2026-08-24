@@ -1501,6 +1501,7 @@ dl {
 }
 
 .bl_footContentsMedicalHours_description__unchecked,
+.bl_footContentsMedicalHours_description__semichecked,
 .bl_footContentsMedicalHours_description__checked {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.4rem;
@@ -1519,7 +1520,7 @@ dl {
   position: relative
 }
 
-.bl_footContentsMedicalHours_description__checked {
+/* .bl_footContentsMedicalHours_description__checked {
   color: transparent
 }
 
@@ -1536,7 +1537,7 @@ dl {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center
-}
+} */
 
 .bl_footContentsMedicalHours_description__unchecked {
   color: inherit
